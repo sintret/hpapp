@@ -2,7 +2,6 @@ package eizougraphic.sintret.hushpuppies;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -12,29 +11,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewStub;
-import android.widget.TextView;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import eizougraphic.sintret.hushpuppies.library.AppConfig;
-import eizougraphic.sintret.hushpuppies.library.JSONParser;
 import eizougraphic.sintret.hushpuppies.library.SessionManager;
 
 /**
  * Created by andy on 10/11/2015.
  */
-public class HelpActivity extends AppCompatActivity
+public class CouponActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private SessionManager session;
-    TextView textView1;
     ProgressDialog progressDialog;
 
 
@@ -44,7 +34,7 @@ public class HelpActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         ViewStub stub = (ViewStub) findViewById(R.id.layout_stub);
-        stub.setLayoutResource(R.layout.content_help);
+        stub.setLayoutResource(R.layout.content_coupon);
         View inflated = stub.inflate();
 
         // session manager
@@ -53,10 +43,6 @@ public class HelpActivity extends AppCompatActivity
         if (!session.isLoggedIn()) {
             logoutUser();
         }
-        JSONParse jsonParse = new JSONParse();
-        jsonParse.execute();
-
-        textView1 = (TextView) findViewById(R.id.textView1);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -88,7 +74,7 @@ public class HelpActivity extends AppCompatActivity
         session.setLogin(false);
 
         // Launching the login activity
-        Intent intent = new Intent(HelpActivity.this, LoginActivity.class);
+        Intent intent = new Intent(CouponActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
@@ -119,26 +105,27 @@ public class HelpActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(HelpActivity.this, SettingActivity.class);
+            Intent intent = new Intent(CouponActivity.this, SettingActivity.class);
             startActivity(intent);
             finish();
         } else if (id == R.id.action_about) {
-            Intent intent = new Intent(HelpActivity.this, AboutActivity.class);
+            Intent intent = new Intent(CouponActivity.this, AboutActivity.class);
             startActivity(intent);
             finish();
         } else if (id == R.id.action_help) {
-
+            Intent intent = new Intent(CouponActivity.this, HelpActivity.class);
+            startActivity(intent);
+            finish();
         } else if (id == R.id.action_home) {
-            Intent intent = new Intent(HelpActivity.this, MainActivity.class);
+            Intent intent = new Intent(CouponActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
         } else if (id == R.id.action_logout) {
             logoutUser();
         } else if (id == R.id.action_profile) {
-            Intent intent = new Intent(HelpActivity.this, ProfileEditActivity.class);
+            Intent intent = new Intent(CouponActivity.this, ProfileEditActivity.class);
             startActivity(intent);
             finish();
-
         }
 
         return super.onOptionsItemSelected(item);
@@ -152,30 +139,26 @@ public class HelpActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-            Intent intent = new Intent(HelpActivity.this, MainActivity.class);
+            Intent intent = new Intent(CouponActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
         } else if (id == R.id.nav_stamp) {
-            // Handle the camera action
-            Intent intent = new Intent(HelpActivity.this, StampActivity.class);
+            Intent intent = new Intent(CouponActivity.this, StampActivity.class);
             startActivity(intent);
             finish();
 
         } else if (id == R.id.nav_coupon) {
-            // Handle the camera action
-            Intent intent = new Intent(HelpActivity.this, CouponActivity.class);
+            Intent intent = new Intent(CouponActivity.this, CouponActivity.class);
             startActivity(intent);
             finish();
 
         } else if (id == R.id.nav_people) {
-            // Handle the camera action
-            Intent intent = new Intent(HelpActivity.this, ProfileActivity.class);
+            Intent intent = new Intent(CouponActivity.this, ProfileActivity.class);
             startActivity(intent);
             finish();
 
-        } else if (id == R.id.nav_point) {
-            // Handle the camera action
-            Intent intent = new Intent(HelpActivity.this, PointActivity.class);
+        }  else if (id == R.id.nav_point) {
+            Intent intent = new Intent(CouponActivity.this, PointActivity.class);
             startActivity(intent);
             finish();
 
@@ -186,45 +169,6 @@ public class HelpActivity extends AppCompatActivity
         return true;
     }
 
-    public class JSONParse extends AsyncTask<String, Void, JSONObject> {
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            progressDialog = new ProgressDialog(HelpActivity.this,
-                    R.style.AppTheme_Dark_Dialog);
-            progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Loading...");
-            progressDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... params) {
-            JSONParser jsonParser = new JSONParser();
-
-            String Url = AppConfig.URL_HELP;
-            Log.d("this url", Url);
-
-            //Getting JSON from url
-            JSONObject jsonObject = jsonParser.getJSONFromUrl(Url);
-            return jsonObject;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject jsonObject) {
-            try {
-
-                String description = jsonObject.getString(AppConfig.TAG__ABOUT_DESCRIPTION);
-                textView1.setText(Html.fromHtml(description));
-                progressDialog.hide();
-
-                Log.d("description :", description + " is true");
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-
-    }
 }
+

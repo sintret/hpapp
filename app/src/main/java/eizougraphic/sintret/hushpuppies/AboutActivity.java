@@ -117,7 +117,9 @@ public class AboutActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent = new Intent(AboutActivity.this, SettingActivity.class);
+            startActivity(intent);
+            finish();
         } else if (id == R.id.action_about) {
             return true;
         } else if (id == R.id.action_help) {
@@ -131,6 +133,9 @@ public class AboutActivity extends AppCompatActivity
         } else if (id == R.id.action_logout) {
             logoutUser();
         } else if (id == R.id.action_profile) {
+            Intent intent = new Intent(AboutActivity.this, ProfileEditActivity.class);
+            startActivity(intent);
+            finish();
 
         }
 
@@ -149,14 +154,28 @@ public class AboutActivity extends AppCompatActivity
             startActivity(intent);
             finish();
         } else if (id == R.id.nav_stamp) {
+            // Handle the camera action
+            Intent intent = new Intent(AboutActivity.this, StampActivity.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.nav_coupon) {
+            // Handle the camera action
+            Intent intent = new Intent(AboutActivity.this, CouponActivity.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.nav_people) {
-
-        } else if (id == R.id.nav_people) {
+            // Handle the camera action
+            Intent intent = new Intent(AboutActivity.this, ProfileActivity.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.nav_point) {
+            // Handle the camera action
+            Intent intent = new Intent(AboutActivity.this, PointActivity.class);
+            startActivity(intent);
+            finish();
 
         }
 

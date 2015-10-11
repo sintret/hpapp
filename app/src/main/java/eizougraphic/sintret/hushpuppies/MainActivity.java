@@ -117,7 +117,9 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+            startActivity(intent);
+            finish();
         } else if (id == R.id.action_about) {
             Intent intent = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(intent);
@@ -127,10 +129,15 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
             finish();
         } else if (id == R.id.action_home) {
-
+            /*Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();*/
         } else if (id == R.id.action_logout) {
             logoutUser();
         } else if (id == R.id.action_profile) {
+            Intent intent = new Intent(MainActivity.this, ProfileEditActivity.class);
+            startActivity(intent);
+            finish();
 
         }
 
@@ -145,18 +152,32 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+           /* Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();*/
+        } else if (id == R.id.nav_stamp) {
+            // Handle the camera action
+            Intent intent = new Intent(MainActivity.this, StampActivity.class);
             startActivity(intent);
             finish();
-        } else if (id == R.id.nav_stamp) {
 
         } else if (id == R.id.nav_coupon) {
+            // Handle the camera action
+            Intent intent = new Intent(MainActivity.this, CouponActivity.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.nav_people) {
-
-        } else if (id == R.id.nav_people) {
+            // Handle the camera action
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.nav_point) {
+            // Handle the camera action
+            Intent intent = new Intent(MainActivity.this, PointActivity.class);
+            startActivity(intent);
+            finish();
 
         }
 

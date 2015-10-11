@@ -13,7 +13,7 @@ public class AppConfig {
     public static final String TAG_ERROR = "error";
     public static final String TAG_POINT = "point";
     public static final String TAG_STAMP = "stamp";
-    public static final String TAG_BOD = "bod";
+    public static final String TAG_BOD = "dob";
     public static final String TAG_CARD_NUMBER = "card_number";
     public static final String TAG_GENDER = "gender";
     public static final String TAG_PHONE = "phone";

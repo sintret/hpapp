@@ -29,14 +29,13 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 import eizougraphic.sintret.hushpuppies.MainActivity;
-import eizougraphic.sintret.hushpuppies.R;
 import eizougraphic.sintret.hushpuppies.library.AppConfig;
 import eizougraphic.sintret.hushpuppies.library.SessionManager;
 
 /**
- * Created by andy on 10/10/2015.
+ * Created by andy on 10/11/2015.
  */
-public class SignupTask extends AsyncTask<String, String, JSONObject> {
+public class LoginTask extends AsyncTask<String, String, JSONObject> {
 
     static InputStream is = null;
     static JSONObject jObj = null;
@@ -46,16 +45,16 @@ public class SignupTask extends AsyncTask<String, String, JSONObject> {
     Context context;
     ProgressDialog progressDialog;
     private SessionManager session;
-    public Button _signupButton;
+    public Button _button;
 
     // variables passed in:
     String url;
 
     // constructor
-    public SignupTask(Context context, String url, HashMap<String, String> params, Button signup, ProgressDialog progressDialog, SessionManager session) {
+    public LoginTask(Context context, String url, HashMap<String, String> params, Button button, ProgressDialog progressDialog, SessionManager session) {
         this.url = url;
         this.params = params;
-        this._signupButton = signup;
+        this._button = button;
         this.progressDialog = progressDialog;
         this.session = session;
         this.context = context;
@@ -156,20 +155,20 @@ public class SignupTask extends AsyncTask<String, String, JSONObject> {
     protected void onPreExecute() {
         //progressDialog = new ProgressDialog(context, R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Creating Account...");
+        progressDialog.setMessage("Please Wait...");
         progressDialog.show();
     }
 
     public void onSignupSuccess() {
-        _signupButton.setEnabled(true);
+        _button.setEnabled(true);
         // Launching the MAIN activity
         Intent intent = new Intent(context, MainActivity.class);
         context.startActivity(intent);
     }
 
     public void onSignupFailed() {
-        Toast.makeText(context, "Email Exist", Toast.LENGTH_LONG).show();
-        _signupButton.setEnabled(true);
+        Toast.makeText(context, "Username or Password wrong", Toast.LENGTH_LONG).show();
+        _button.setEnabled(true);
         progressDialog.hide();
     }
 }

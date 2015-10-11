@@ -18,12 +18,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import eizougraphic.sintret.hushpuppies.library.AppConfig;
 import eizougraphic.sintret.hushpuppies.library.JSONParser;
 import eizougraphic.sintret.hushpuppies.library.SessionManager;
 import eizougraphic.sintret.hushpuppies.sql.SQLiteHandler;
+import eizougraphic.sintret.hushpuppies.task.LoginTask;
 
 /**
  * Created by andy on 10/10/2015.
@@ -40,7 +43,6 @@ public class LoginActivity  extends AppCompatActivity {
     public String mpassword;
 
     JSONArray user = null;
-    JSONParse jsonParse = new JSONParse();
 
     @InjectView(R.id.input_email)
     EditText _emailText;
@@ -105,31 +107,26 @@ public class LoginActivity  extends AppCompatActivity {
 
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
                 R.style.AppTheme_Dark_Dialog);
-        progressDialog.setIndeterminate(true);
+       /* progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
-        progressDialog.show();
+        progressDialog.show();*/
 
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 
         // TODO: Implement your own authentication logic here.
+        /*JSONParse jsonParse = new JSONParse();
         jsonParse.email = email;
         jsonParse.password = password;
-        jsonParse.execute();
+        jsonParse.execute();*/
 
-        new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        // On complete call either onLoginSuccess or onLoginFailed
-                        if (session.isLoggedIn()) {
-                            // User is already logged in. Take him to main activity
-                            onLoginSuccess();
-                        } else {
-                            progressDialog.dismiss();
-                            onLoginFailed();
-                        }
-                    }
-                }, 3000);
+        HashMap<String, String> data = new HashMap<String, String>();
+        data.put("email", email);
+        data.put("password", password);
+
+        //call asyncTask for login
+        LoginTask loginTask = new LoginTask(LoginActivity.this, AppConfig.URL_LOGIN, data,_loginButton, progressDialog, session);
+        loginTask.execute();
     }
 
 
@@ -189,60 +186,4 @@ public class LoginActivity  extends AppCompatActivity {
         return valid;
     }
 
-    public class JSONParse extends AsyncTask<String, String, JSONObject> {
-
-        public String email;
-        public String password;
-        public boolean validate = false;
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... params) {
-            JSONParser jsonParser = new JSONParser();
-
-            String Url = AppConfig.URL_LOGIN + "?email=" + email + "&password=" + password;
-            Log.d("this url", Url);
-
-            //Getting JSON from url
-            JSONObject jsonObject = jsonParser.getJSONFromUrl(Url);
-            return jsonObject;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject jsonObject) {
-            try {
-
-                String id = jsonObject.getString(AppConfig.TAG_ID);
-                String name = jsonObject.getString(AppConfig.TAG_FULLNAME);
-                String email =jsonObject.getString(AppConfig.TAG_EMAIL);
-                String uniqueId = jsonObject.getString(AppConfig.TAG_UNIQUE_ID);
-                String point = jsonObject.getString(AppConfig.TAG_POINT);
-                String stamp = jsonObject.getString(AppConfig.TAG_STAMP);
-                String phone = jsonObject.getString(AppConfig.TAG_PHONE);
-                String address = jsonObject.getString(AppConfig.TAG_UNIQUE_ID);
-                String coupons = jsonObject.getString(AppConfig.TAG_UNIQUE_ID);
-                String card_number = jsonObject.getString(AppConfig.TAG_UNIQUE_ID);
-                String bod = jsonObject.getString(AppConfig.TAG_UNIQUE_ID);
-                String created_at = jsonObject.getString(AppConfig.TAG_UNIQUE_ID);
-                String photo = jsonObject.getString(AppConfig.TAG_PHOTO);
-                Boolean error = jsonObject.getBoolean(AppConfig.TAG_ERROR);
-                Log.d("email user",email+" is true");
-                Log.d("status",error+" is " + error);
-
-                if (error == true) {
-                    //Jika ada error
-                    session.setLogin(false);
-                } else {
-                    //Jika Oke
-                    session.createLoginSession(name,email,uniqueId,point,stamp,phone,address,coupons,card_number,bod,created_at,photo);
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }
