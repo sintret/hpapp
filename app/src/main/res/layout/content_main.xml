@@ -23,16 +23,23 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:src="@drawable/landing_image" />
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:text="auuuuuu"
-            android:layout_below="@+id/image_logo"
-            android:layout_height="wrap_content" />
+
+        <!--   Name -->
+
+            <TextView android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="auuuuuu"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                 />
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:text="auuuuuu"
+            android:textSize="23dp"
+            android:textStyle="bold"
             android:layout_below="@+id/textView1"
             android:layout_height="wrap_content" />
 
@@ -42,23 +49,24 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_below="@+id/top_layout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@color/black"
-        android:orientation="horizontal">
+
+        android:layout_alignLeft="@+id/top_layout"
+        android:layout_alignStart="@+id/top_layout">
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:textColor="@color/white"
+            android:textSize="23dp"
+            android:textStyle="bold"
             android:text="Point"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:text="Stamp"
-            android:textColor="@color/white"
+            android:textSize="23dp"
+            android:textStyle="bold"
             android:layout_below="@+id/textView3"
             android:layout_height="wrap_content" />
 
