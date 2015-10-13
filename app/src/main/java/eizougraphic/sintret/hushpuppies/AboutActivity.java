@@ -126,7 +126,7 @@ public class AboutActivity extends AppCompatActivity
             Intent intent = new Intent(AboutActivity.this, HelpActivity.class);
             startActivity(intent);
             finish();
-        } else if (id == R.id.action_home) {
+        } else if (id == R.id.action_help) {
             Intent intent = new Intent(AboutActivity.this, MainActivity.class);
             startActivity(intent);
             finish();

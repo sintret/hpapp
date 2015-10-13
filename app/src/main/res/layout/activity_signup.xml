@@ -9,64 +9,185 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="56dp"
+        android:paddingTop="26dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <ImageView android:src="@mipmap/ic_launcher"
-            android:layout_width="wrap_content"
-            android:layout_height="72dp"
-            android:layout_marginBottom="24dp"
-            android:layout_gravity="center_horizontal" />
+        <!-- Top Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Account"
+            android:lineSpacingExtra="5dp"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp"/>
 
-        <!-- Name Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please register your new account"
+            android:lineSpacingExtra="5dp"
+            android:gravity="center"/>
+
+        <!-- Fulllname Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
             <EditText android:id="@+id/input_name"
+                android:drawableLeft="@mipmap/ic_person_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
-                android:hint="Name" />
+                android:hint="Fullname" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!-- Date Of Birth Label (Should Be Timepicker) -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
+            <EditText android:id="@+id/input_name"
+                android:drawableLeft="@mipmap/ic_event_note_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="Date Of Birth" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Gender Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp">
+            <Spinner android:id="@+id/input_name"
+                android:drawableLeft="@mipmap/ic_phonelink_ring_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Phone / Mobile Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
+            <EditText android:id="@+id/input_name"
+                android:drawableLeft="@mipmap/ic_phonelink_ring_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="Phone / Mobile" />
         </android.support.design.widget.TextInputLayout>
 
         <!--  Email Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
             <EditText android:id="@+id/input_email"
+                android:drawableLeft="@mipmap/ic_local_post_office_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:hint="Email" />
         </android.support.design.widget.TextInputLayout>
 
-        <!-- Password Label -->
+        <!--  Password Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
             <EditText android:id="@+id/input_password"
+                android:drawableLeft="@mipmap/ic_https_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:hint="Password"/>
         </android.support.design.widget.TextInputLayout>
 
+        <!-- Password Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
+            <EditText android:id="@+id/input_password"
+                android:drawableLeft="@mipmap/ic_https_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Retype Password"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Aggree -->
+        <RelativeLayout
+            android:id="@+id/RelativeLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView android:id="@+id/terms"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:text="I agree with the membership usage terms and conditions"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dip"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_alignParentRight="true">
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </RelativeLayout>
+
         <!-- Signup Button -->
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
             android:padding="12dp"
-            android:text="Create Account"/>
+            android:minHeight="70dp"
+            android:textSize="22dip"
+            android:text="Register"/>
 
         <TextView android:id="@+id/link_login"
             android:layout_width="fill_parent"

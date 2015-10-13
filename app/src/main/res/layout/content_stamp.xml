@@ -1,19 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:id="@+id/content_stamp"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="eizougraphic.sintret.hushpuppies.AboutActivity">
-
-    <TextView
-        android:id="@+id/textView1"
-        android:text="Stamps"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="55dp"
+        android:orientation="vertical" >
 
-</RelativeLayout>
+        <!-- ROW 1-3 -->
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_checked"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignLeft="true" />
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_checked"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_plus"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <!-- ROW 4-6 -->
+        <ImageButton
+            android:layout_marginTop="110dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_empty"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignLeft="true" />
+        <ImageButton
+            android:layout_marginTop="110dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_empty"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <ImageButton
+            android:layout_marginTop="110dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_empty"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <!-- ROW 7-9 -->
+        <ImageButton
+            android:layout_marginTop="220dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_empty"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignLeft="true" />
+        <ImageButton
+            android:layout_marginTop="220dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_empty"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <ImageButton
+            android:layout_marginTop="220dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_empty"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <!-- ROW 10-12 -->
+        <ImageButton
+            android:layout_marginTop="330dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_empty"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignLeft="true" />
+        <ImageButton
+            android:layout_marginTop="330dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_empty"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <ImageButton
+            android:layout_marginTop="330dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/stamp_empty"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_marginTop="450dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Redeem"
+            android:minHeight="70dp"
+            android:textSize="22dip"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>

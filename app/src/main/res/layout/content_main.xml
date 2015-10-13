@@ -1,75 +1,159 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/content_main"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="55dp"
-    android:orientation="vertical" >
+    android:fitsSystemWindows="true">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/content_main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="55dp"
+            android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/top_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="#FFFFFF"
-        android:orientation="vertical"
-        >
-        <ImageView
-            android:id="@+id/image_logo"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:src="@drawable/landing_image" />
+            <!-- Card -->
 
-        <!--   Name -->
 
-            <TextView android:id="@+id/textView1"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@color/white"
+                android:src="@drawable/logo"
+                />
+
+                <!--   Name -->
+                <TextView android:id="@+id/textView1"
+                    android:background="@color/primary_darker"
+                    android:layout_marginTop="150dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ken Girisya"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="times new roman" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:background="@color/primary_darker"
+                    android:layout_marginTop="208dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="090 876 241"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_alignBottom="@+id/image_logo"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="times new roman" />
+
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout01"
+                android:layout_marginTop="270dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="auuuuuu"
-                android:textSize="23dp"
-                android:textStyle="bold"
-                 />
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:text="auuuuuu"
-            android:textSize="23dp"
-            android:textStyle="bold"
-            android:layout_below="@+id/textView1"
-            android:layout_height="wrap_content" />
+                <!-- stamps box -->
+                <RelativeLayout
+                    android:id="@+id/well_stamp"
+                    android:background="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:padding="30dp">
 
-    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:text="Stamps"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:fontFamily="times new roman"
+                        android:textStyle="bold"
+                        android:textSize="22dp"/>
 
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@+id/top_layout"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="1 /"
+                        android:gravity="left"
+                        android:textSize="30dip"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="12"
+                        android:gravity="right"
+                        android:textSize="30dip"/>
 
-        android:layout_alignLeft="@+id/top_layout"
-        android:layout_alignStart="@+id/top_layout">
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:textSize="23dp"
-            android:textStyle="bold"
-            android:text="Point"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:text="Stamp"
-            android:textSize="23dp"
-            android:textStyle="bold"
-            android:layout_below="@+id/textView3"
-            android:layout_height="wrap_content" />
+                    </RelativeLayout>
 
-    </LinearLayout>
-</RelativeLayout>
+                </RelativeLayout>
 
+                <!-- points box -->
+                <RelativeLayout
+                    android:layout_toRightOf="@+id/well_stamp"
+                    android:id="@+id/well_point"
+                    android:background="@color/white"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:padding="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:text="Points"
+                        android:gravity="center"
+                        android:fontFamily="times new roman"
+                        android:textStyle="bold"
+                        android:textSize="22dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="10000"
+                        android:gravity="center"
+                        android:textSize="30dip"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- slideshow promo banner -->
+
+            <!-- slideshow promo banner -->
+
+        </RelativeLayout>
+</ScrollView>
