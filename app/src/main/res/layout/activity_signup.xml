@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp">
-            <EditText android:id="@+id/input_name"
+            <EditText android:id="@+id/fullname"
                 android:drawableLeft="@mipmap/ic_person_black_36dp"
                 android:drawablePadding="10dp"
                 android:minHeight="60dp"
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp">
-            <EditText android:id="@+id/input_name"
+            <EditText android:id="@+id/dob"
                 android:drawableLeft="@mipmap/ic_event_note_black_36dp"
                 android:drawablePadding="10dp"
                 android:minHeight="60dp"
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp">
-            <Spinner android:id="@+id/input_name"
+            <Spinner android:id="@+id/gender"
                 android:drawableLeft="@mipmap/ic_phonelink_ring_black_36dp"
                 android:drawablePadding="10dp"
                 android:minHeight="60dp"
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp">
-            <EditText android:id="@+id/input_name"
+            <EditText android:id="@+id/phone"
                 android:drawableLeft="@mipmap/ic_phonelink_ring_black_36dp"
                 android:drawablePadding="10dp"
                 android:minHeight="60dp"
@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp">
-            <EditText android:id="@+id/input_email"
+            <EditText android:id="@+id/email"
                 android:drawableLeft="@mipmap/ic_local_post_office_black_36dp"
                 android:drawablePadding="10dp"
                 android:minHeight="60dp"
@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp">
-            <EditText android:id="@+id/input_password"
+            <EditText android:id="@+id/password"
                 android:drawableLeft="@mipmap/ic_https_black_36dp"
                 android:drawablePadding="10dp"
                 android:minHeight="60dp"
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp">
-            <EditText android:id="@+id/input_password"
+            <EditText android:id="@+id/password_repeat"
                 android:drawableLeft="@mipmap/ic_https_black_36dp"
                 android:drawablePadding="10dp"
                 android:minHeight="60dp"
