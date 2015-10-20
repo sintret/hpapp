@@ -41,5 +41,9 @@ public class AppConfig {
 
     // Server user register url
     public static String URL_ABOUT = "http://hushpuppies.co.id/admin_app/api/about.php";
+    public static String URL_REGISTER_GCM = "http://hushpuppies.co.id/admin_app/api/register_gcm.php";
+
+    public static String SERVER_SUCCESS = "Succcess to Register";
+    public static final String TAG_GCM_REGID = "gcm_regid";
 
 }
