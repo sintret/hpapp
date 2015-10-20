@@ -1,13 +1,421 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:id="@+id/content_settings"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <!-- start profile -->
+    <RelativeLayout
+        android:background="@color/primary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/imageProfile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/no_photo"/>
+
+                <ImageView
+                    android:id="@+id/imageCrop"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/photo_crop" />
 
 
+            </FrameLayout>
 
-</RelativeLayout>
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:text="ken girisya"
+                android:gravity="center"
+                android:textSize="16dp"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@+id/imageProfile"
+                android:id="@+id/stampProfile"
+                android:layout_width="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:text="8"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="stamps"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:layout_gravity="center" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_toRightOf="@+id/stampProfile"
+                android:id="@+id/pointProfile"
+                android:layout_width="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:text="1000000"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="points"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:layout_gravity="center" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_toRightOf="@+id/pointProfile"
+                android:id="@+id/couponProfile"
+                android:layout_width="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:text="12"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="coupon"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:layout_gravity="center" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="95dp"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Edit Profile"
+            android:minHeight="40dp"
+            android:textSize="14dip"/>
+
+    </RelativeLayout>
+    <!-- end profile -->
+
+
+        <!-- start history -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        >
+
+        <!-- lists -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/history1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="6dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPadding="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@mipmap/ic_beenhere_black_36dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:id="@+id/description1"
+                    android:layout_height="match_parent"
+                    android:hint="You have checked in to Senayan City store and get 1 stamp."
+                    android:textSize="14dp"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Now"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_below="@+id/description1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true" />
+
+             </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <!-- lists -->
+
+        <!-- lists -->
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/history1"
+            android:id="@+id/history2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="6dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPadding="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@mipmap/ic_content_cut_black_36dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:id="@+id/description2"
+                    android:layout_height="match_parent"
+                    android:hint="You have used your 10% All Shoes coupon at Senayan City store."
+                    android:textSize="14dp"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:hint="10 Minutes Ago"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_below="@+id/description2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <!-- lists -->
+
+        <!-- lists -->
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/history2"
+            android:id="@+id/history3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="6dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPadding="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@mipmap/ic_forward_black_36dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:id="@+id/description3"
+                    android:layout_height="match_parent"
+                    android:hint="You have exchanged 500pt for 10% All Shoes coupon."
+                    android:textSize="14dp"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:hint="10 Week Ago"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_below="@+id/description3"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <!-- lists -->
+
+        <!-- lists -->
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/history3"
+            android:id="@+id/history4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="6dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPadding="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@mipmap/ic_add_black_36dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:id="@+id/description4"
+                    android:layout_height="match_parent"
+                    android:hint="250 pt has successfully been added to your account."
+                    android:textSize="14dp"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:hint="1 Month Ago"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_below="@+id/description4"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <!-- lists -->
+
+        <!-- load more -->
+
+
+        </RelativeLayout>
+        <!-- end history -->
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

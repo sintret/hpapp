@@ -1,19 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:id="@+id/content_edit_profile"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="eizougraphic.sintret.hushpuppies.AboutActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:id="@+id/textView1"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:text="Edit Profile"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:lineSpacingExtra="5dp"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp"/>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/no_photo"/>
+
+            <ImageView
+                android:id="@+id/imageCrop"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/photo_crop" />
+
+
+        </FrameLayout>
+
+        <!-- Email Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="kengirisya@eizou.id"
+            android:lineSpacingExtra="5dp"
+            android:gravity="center"
+            android:textSize="22dp"/>
+        <!-- Fulllname Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
+            <EditText android:id="@+id/input_name"
+                android:drawableLeft="@mipmap/ic_person_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="Ken Girisya" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!-- Date Of Birth Label (Should Be Timepicker) -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
+            <EditText android:id="@+id/input_name"
+                android:drawableLeft="@mipmap/ic_event_note_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="12/12/1980" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Gender Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp">
+            <Spinner android:id="@+id/input_name"
+                android:drawableLeft="@mipmap/ic_phonelink_ring_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Phone / Mobile Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
+            <EditText android:id="@+id/input_name"
+                android:drawableLeft="@mipmap/ic_phonelink_ring_black_36dp"
+                android:drawablePadding="10dp"
+                android:minHeight="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="+6281110101765" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Save Changes Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_signup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="12dp"
+            android:minHeight="70dp"
+            android:textSize="22dip"
+            android:text="Save Changes"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
