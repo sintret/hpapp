@@ -15,10 +15,6 @@ import org.json.JSONObject;
 import eizougraphic.sintret.hushpuppies.library.AppConfig;
 import eizougraphic.sintret.hushpuppies.library.JSONParser;
 
-/**
- * Created by andy on 10/11/2015.
- */
-
 public class HelpActivity extends BaseActivity {
 
     TextView textView1;

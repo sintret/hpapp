@@ -20,6 +20,8 @@
                 android:layout_height="150dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
                 android:background="@color/white"
                 android:src="@drawable/logo"
                 />
@@ -56,7 +58,6 @@
                     android:paddingRight="20dp"
                     android:layout_marginBottom="0dp"
                     android:textColor="@color/colorPrimary"
-                    android:layout_alignBottom="@+id/image_logo"
                     android:layout_centerHorizontal="true"
                     android:fontFamily="times new roman" />
 
@@ -98,6 +99,7 @@
                         android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/textView3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
@@ -140,6 +142,7 @@
                         android:textSize="22dp"/>
 
                     <TextView
+                        android:id="@+id/textView4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"

@@ -41,14 +41,14 @@ public class BaseActivity  extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "No Promo at this moment...", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -109,10 +109,6 @@ public class BaseActivity  extends AppCompatActivity
             finish();
         } else if (id == R.id.action_help) {
              intent = new Intent(this, HelpActivity.class);
-            startActivity(intent);
-            finish();
-        } else if (id == R.id.action_home) {
-             intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
         } else if (id == R.id.action_logout) {
