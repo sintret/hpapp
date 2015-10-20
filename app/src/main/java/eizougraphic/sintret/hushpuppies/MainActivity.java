@@ -41,7 +41,7 @@ public class MainActivity extends BaseActivity {
         textView2 = (TextView) findViewById(R.id.textView2);
         textView2.setText(session.card_number());
         textView3 = (TextView) findViewById(R.id.textView3);
-        textView3.setText(session.point()+" / ");
+        textView3.setText("1 / "+session.point());
         textView4 = (TextView) findViewById(R.id.textView4);
         textView4.setText(session.stamp());
 
