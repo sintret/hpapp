@@ -103,7 +103,7 @@ public class LoginActivity  extends AppCompatActivity {
             return;
         }
 
-        _loginButton.setEnabled(false);
+       // _loginButton.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
                 R.style.AppTheme_Dark_Dialog);
@@ -149,7 +149,7 @@ public class LoginActivity  extends AppCompatActivity {
     }
 
     public void onLoginSuccess() {
-        _loginButton.setEnabled(false);
+        //_loginButton.setEnabled(false);
         // Launching the MAIN activity
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
@@ -159,7 +159,7 @@ public class LoginActivity  extends AppCompatActivity {
     public void onLoginFailed() {
         Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
 
-        _loginButton.setEnabled(true);
+       // _loginButton.setEnabled(true);
     }
 
 

@@ -131,6 +131,8 @@ public class SignupTask extends AsyncTask<String, String, JSONObject> {
             String bod = jsonObject.getString(AppConfig.TAG_BOD);
             String created_at = jsonObject.getString(AppConfig.TAG_CREATED_AT);
             String photo = jsonObject.getString(AppConfig.TAG_PHOTO);
+            String error_message = jsonObject.getString(AppConfig.TAG_ERROR_MESSAGE);
+
             Boolean error = jsonObject.getBoolean(AppConfig.TAG_ERROR);
             Log.d("email user",email+" is true");
             Log.d("status",error+" is " + error);
@@ -138,6 +140,8 @@ public class SignupTask extends AsyncTask<String, String, JSONObject> {
             if (error == true) {
                 //Jika ada error
                 session.setLogin(false);
+                Toast.makeText(context, error_message, Toast.LENGTH_LONG).show();
+
                 onSignupFailed();
             } else {
                 //Jika Oke
@@ -168,7 +172,6 @@ public class SignupTask extends AsyncTask<String, String, JSONObject> {
     }
 
     public void onSignupFailed() {
-        Toast.makeText(context, "Email Exist", Toast.LENGTH_LONG).show();
         _signupButton.setEnabled(true);
         progressDialog.hide();
     }

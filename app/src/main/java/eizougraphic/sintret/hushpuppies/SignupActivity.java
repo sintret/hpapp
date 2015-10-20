@@ -38,10 +38,14 @@ public class SignupActivity  extends AppCompatActivity {
 
     public JSONObject jsonObject = null;
 
-    @InjectView(R.id.input_name)
-    EditText _nameText;
-    @InjectView(R.id.input_email) EditText _emailText;
-    @InjectView(R.id.input_password) EditText _passwordText;
+    @InjectView(R.id.fullname) EditText _nameText;
+    @InjectView(R.id.dob) EditText _dobText;
+    @InjectView(R.id.phone) EditText _phoneText;
+
+    @InjectView(R.id.email) EditText _emailText;
+    @InjectView(R.id.password) EditText _passwordText;
+    @InjectView(R.id.password_repeat) EditText _passwordRepeatText;
+
     @InjectView(R.id.btn_signup)
     Button _signupButton;
     @InjectView(R.id.link_login)
@@ -99,13 +103,20 @@ public class SignupActivity  extends AppCompatActivity {
         progressDialog.show();*/
 
         String name = _nameText.getText().toString();
+        String dob = _dobText.getText().toString();
+        String phone = _phoneText.getText().toString();
+
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
+        String password_repeat = _passwordRepeatText.getText().toString();
 
         // TODO: Implement your own signup logic here.
         HashMap<String, String> data = new HashMap<String, String>();
         data.put("name", name);
+        data.put("dob", dob);
+        data.put("phone", phone);
         data.put("email", email);
+        data.put("password_repeat", password_repeat);
         data.put("password", password);
 
         //call asyncTask for signup

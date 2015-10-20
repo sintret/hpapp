@@ -158,7 +158,10 @@ public class BaseActivity  extends AppCompatActivity
              intent = new Intent(this, PointActivity.class);
             startActivity(intent);
             finish();
-
+        } else if(id == R.id.nav_scanner){
+            intent = new Intent(this, ScannerActivity.class);
+            startActivity(intent);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

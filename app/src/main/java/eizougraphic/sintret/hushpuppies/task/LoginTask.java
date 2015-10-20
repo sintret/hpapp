@@ -133,6 +133,7 @@ public class LoginTask extends AsyncTask<String, String, JSONObject> {
             Boolean error = jsonObject.getBoolean(AppConfig.TAG_ERROR);
             Log.d("email user",email+" is true");
             Log.d("status",error+" is " + error);
+            Log.d("JSON OBJECT", jsonObject.toString());
 
             if (error == true) {
                 //Jika ada error

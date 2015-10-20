@@ -5,12 +5,14 @@ package eizougraphic.sintret.hushpuppies.library;
  */
 public class AppConfig {
     // variable to get data from async
+    public static final String TAG_ERROR = "error";
+    public static final String TAG_ERROR_MESSAGE = "error_message";
+
     public static final String TAG_USER = "user";
     public static final String TAG_ID = "id";
     public static final String TAG_FULLNAME = "fullname";
     public static final String TAG_EMAIL = "email";
     public static final String TAG_UNIQUE_ID = "unique_id";
-    public static final String TAG_ERROR = "error";
     public static final String TAG_POINT = "point";
     public static final String TAG_STAMP = "stamp";
     public static final String TAG_BOD = "dob";
