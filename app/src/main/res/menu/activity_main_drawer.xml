@@ -2,16 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_home" android:icon="@android:drawable/ic_menu_home"
+        <item android:id="@+id/nav_home" android:icon="@android:drawable/ic_menu_myplaces"
             android:title="Home"/>
         <item android:id="@+id/nav_stamp" android:icon="@android:drawable/ic_menu_compass"
             android:title="Stamp" />
         <item android:id="@+id/nav_point" android:icon="@android:drawable/ic_menu_agenda"
             android:title="Point" />
-        <item android:id="@+id/nav_coupon" android:icon="@android:drawable/ic_menu_cut"
+        <item android:id="@+id/nav_coupon" android:icon="@android:drawable/ic_menu_crop"
             android:title="Coupon" />
         <item android:id="@+id/nav_people" android:icon="@android:drawable/ic_menu_view"
             android:title="Profile" />
+        <item android:id="@+id/nav_scanner" android:icon="@android:drawable/ic_menu_search"
+            android:title="Scanner" />
     </group>
 
 </menu>
