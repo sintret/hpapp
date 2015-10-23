@@ -11,6 +11,7 @@
     tools:context="eizougraphic.sintret.hushpuppies.AboutActivity">
 
     <TextView
+        android:textSize="16dp"
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_below="@+id/image_logo"

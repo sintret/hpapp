@@ -72,31 +72,25 @@
             android:minHeight="70dp"
             android:textSize="22dip"/>
 
-        <RelativeLayout
-            android:id="@+id/RelativeLayout01"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+
+            <TextView android:layout_below="@+id/link_signup"
+                android:id="@+id/link_forgot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:padding="10dp"
+                android:text="Forgot password?"
+                android:gravity="center"
+                android:textSize="18dip"/>
 
             <TextView android:id="@+id/link_signup"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="0dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
                 android:text="New here? Sign up"
-                android:layout_gravity="right"
-                android:gravity="right"
-                android:layout_alignParentRight="true"
+                android:gravity="center"
                 android:textSize="18dip"/>
-
-            <TextView android:id="@+id/link_forgot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="0dp"
-                android:text="Forgot password?"
-                android:gravity="left"
-                android:layout_alignParentLeft="true"
-                android:textSize="18dip"/>
-
-        </RelativeLayout>
 
     </LinearLayout>
 </ScrollView>
