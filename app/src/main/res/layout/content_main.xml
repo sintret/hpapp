@@ -104,7 +104,6 @@
                         card_view:cardBackgroundColor="@color/white"
                         card_view:cardCornerRadius="0dp"
                         card_view:cardElevation="3dp"
-                        card_view:cardUseCompactPadding="true"
                         card_view:contentPadding="20dp"
                         >
 
@@ -151,7 +150,6 @@
                         card_view:cardBackgroundColor="@color/white"
                         card_view:cardCornerRadius="0dp"
                         card_view:cardElevation="3dp"
-                        card_view:cardUseCompactPadding="true"
                         card_view:contentPadding="20dp"
                         >
 

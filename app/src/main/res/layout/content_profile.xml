@@ -28,6 +28,7 @@
             >
 
             <FrameLayout
+                android:id="@+id/imageFrame"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="5dp"
@@ -58,7 +59,7 @@
                 android:textSize="16dp"/>
 
             <RelativeLayout
-                android:layout_toRightOf="@+id/imageProfile"
+                android:layout_toRightOf="@+id/imageFrame"
                 android:id="@+id/stampProfile"
                 android:layout_width="80dp"
                 android:layout_alignParentLeft="true"
