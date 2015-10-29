@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit Profile"
+            android:text="Purchase"
             android:lineSpacingExtra="5dp"
             android:gravity="center"
             android:textSize="25dp"
@@ -46,52 +46,36 @@
 
         <!-- Email Label -->
         <TextView
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="kengirisya@eizou.id"
             android:lineSpacingExtra="5dp"
             android:gravity="center"
             android:textSize="22dp"/>
-        <!-- Fulllname Label -->
+        <TextView
+            android:id="@+id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="090 876 241"
+            android:lineSpacingExtra="5dp"
+            android:gravity="center"
+            android:textSize="18dp"/>
+        <TextView
+            android:id="@+id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ken girisya"
+            android:lineSpacingExtra="5dp"
+            android:gravity="center"
+            android:textSize="14dp"/>
+
+        <!-- Store Selector Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="10dp">
-            <EditText android:id="@+id/input_name"
-                android:drawableLeft="@mipmap/ic_person_black_36dp"
-                android:drawablePadding="10dp"
-                android:minHeight="60dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textCapWords"
-                android:hint="Fullname"
-                android:text="Ken Girisya"/>
-        </android.support.design.widget.TextInputLayout>
-
-
-        <!-- Date Of Birth Label (Should Be Timepicker) -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="10dp">
-            <EditText android:id="@+id/input_dob"
-                android:drawableLeft="@mipmap/ic_event_note_black_36dp"
-                android:drawablePadding="10dp"
-                android:minHeight="60dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textCapWords"
-                android:hint="Date Of Birth"
-                android:text="12/12/1980" />
-        </android.support.design.widget.TextInputLayout>
-
-        <!-- Gender Label -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="0dp">
             <Spinner android:id="@+id/input_gender"
                 android:drawableLeft="@mipmap/ic_phonelink_ring_black_36dp"
@@ -103,25 +87,24 @@
             </Spinner>
         </android.support.design.widget.TextInputLayout>
 
-        <!-- Phone / Mobile Label -->
+        <!-- Amount Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp">
-            <EditText android:id="@+id/input_phone"
-                android:drawableLeft="@mipmap/ic_phonelink_ring_black_36dp"
-                android:drawablePadding="10dp"
+            <EditText android:id="@+id/input_amount"
+                 android:drawablePadding="10dp"
                 android:minHeight="60dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
-                android:hint="+6281110101765" />
+                android:hint="Amount"/>
         </android.support.design.widget.TextInputLayout>
 
         <!-- Save Changes Button -->
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_signup"
+            android:id="@+id/btn_submit"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -129,7 +112,7 @@
             android:padding="12dp"
             android:minHeight="70dp"
             android:textSize="22dip"
-            android:text="Save Changes"/>
+            android:text="Confirm"/>
 
 
     </LinearLayout>
